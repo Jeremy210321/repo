@@ -23,9 +23,7 @@
 .ant-menu-dark.ant-menu-horizontal > .ant-menu-item:hover {
     background: rgba(68, 250, 4, 0.4);
 }
-/*.item{*/
-/*    height:30px;*/
-/*}*/
-/*.item{*/
+.item{
+    max-height:40px;
+}
 
-/*}*/
