@@ -5,13 +5,10 @@ import "../styles/App.css"
 function MainLogo(props) {
     return (
         <Row className="main-logo">
-            <Col span={3}><img src="../images/titulo.png" className="title-image"
-                               alt="title"></img></Col>
-            <Col span={12}></Col>
-            <Col span={6}><Button className="count-button" ><Link to="/mi-cuenta">Mi cuenta</Link></Button><img
-                src="../images/logo.png"
-                alt="logo"
-                className="logo-image"/></Col>
+            <Col span={3}><img src="https://i.ibb.co/ZxQJ0Kp/titulo.png" alt="titulo" border="0" className="header-image header-title"/></Col>
+            <Col span={12}/>
+            <Col span={6} className="col-logo"><Button className="count-button" ><Link to="/mi-cuenta">Mi cuenta</Link></Button>
+                <img src="https://i.ibb.co/NV4v5Ww/Logo-Trash-Info.png" alt="Logo-TrashInfo" border="0" className="header-image header-logo"/></Col>
         </Row>
     );
 }

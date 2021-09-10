@@ -1,4 +1,4 @@
-import {Button, Layout, Row, Col} from "antd";
+import {Layout} from "antd";
 import "../styles/App.css";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import InicioPage from "../pages/InicioPage";
@@ -48,9 +48,6 @@ function App() {
                             <InicioPage/>
                         </Route>
                     </Switch>
-                    <img src="../images/titulo.svg" alt="titulito"/>
-                    <img src="../images/logo.svg" alt="logito"/>
-
                 </Content>
                 <Footer className="main-footer"><MainFooter/> </Footer>
             </Layout>

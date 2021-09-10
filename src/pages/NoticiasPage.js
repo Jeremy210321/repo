@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import {Row, Col, Menu} from 'antd';
+import React, {useState} from 'react';
+import {Menu} from 'antd';
 import "../styles/App.css"
 import "../styles/InfoNoticias.css"
 import {Link, Route, Switch, useRouteMatch} from "react-router-dom";

@@ -35,7 +35,7 @@ function MapaInfo(props) {
         src="https://www.google.com/maps/d/embed?mid=1BZPF3nfB5_hEXaFTcf4zTlIILa4"
         width="663"
         height="626"
-      ></iframe>
+       ></iframe>
       <Modal
         visible={mostrarDetalleMapa}
         onCancel={handleClose}
