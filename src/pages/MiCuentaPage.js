@@ -2,9 +2,13 @@ import React from 'react';
 import {Row, Col, Form, Input, Button,Upload} from "antd";
 import "../styles/App.css"
 import "../styles/MiCuenta.css"
-import { UploadOutlined, InboxOutlined } from '@ant-design/icons';
+import { UploadOutlined } from '@ant-design/icons';
+import {Link} from "react-router-dom";
 
 function MiCuentaPage(props) {
+    const handleLogOut = () =>{
+        <Link to="/" />;
+    };
     const user = [{
         names: " Jeremy León",
         email: "jeremy.leon@gmail.com"
@@ -46,10 +50,10 @@ function MiCuentaPage(props) {
                         name="load"
                         valuePropName="fileList"
                         getValueFromEvent={normFile}
-                        extra="Agregue su foto de perfil"
+                        extra="Agrega tu foto de perfil"
                     >
                         <Upload name="logo" action="/upload.do" listType="picture">
-                            <Button icon={<UploadOutlined />}>Click to upload</Button>
+                            <Button icon={<UploadOutlined />}>Actualizar foto de perfil</Button>
                         </Upload>
                     </Form.Item>
                 </Form>
@@ -59,16 +63,14 @@ function MiCuentaPage(props) {
                 <Form
                 >
                     <Form.Item
-                        names="Nombres"
-                        label="Nombres y apellidos"
+                        name="names"
+                        label="Nombres y Apellidos"
                         hasFeedback
-
                         rules={[
                             {
-
                                 required: true,
                                 message:
-                                    "El campo no debe estar vacío, por favor ingresa tu nombre y apellido",
+                                    "Por favor ingresa tu nombre y apellido",
                             },
                         ]}
                     >
@@ -77,7 +79,7 @@ function MiCuentaPage(props) {
 
                     <Form.Item
                         name="email"
-                        label="Correco electrónico"
+                        label="Correo electrónico"
                         rules={[
                             {
                                 type: 'email',
@@ -85,7 +87,7 @@ function MiCuentaPage(props) {
                             },
                             {
                                 required: true,
-                                message: 'El campo no debe estar vacío, por favor ingresa tu correo electrónico',
+                                message: 'Por favor ingresa tu correo electrónico',
                             },
                         ]}
                     >
@@ -100,7 +102,7 @@ function MiCuentaPage(props) {
                             {
                                 required: true,
                                 message:
-                                    "El campo no debe estar vacío, por favor ingresa una dirección",
+                                    "Por favor ingresa una dirección",
                             },
                         ]}
                     >
@@ -114,7 +116,7 @@ function MiCuentaPage(props) {
                             {
                                 required: true,
                                 message:
-                                    "El campo no debe estar vacío, por favor ingresa un nombre de usuario",
+                                    "Por favor ingresa un nombre de usuario",
                             },
                         ]}
                     >
@@ -129,7 +131,7 @@ function MiCuentaPage(props) {
                             {
                                 required: true,
                                 message:
-                                    "El campo no debe estar vacío, por favor ingresa un número de teléfono",
+                                    "Por favor ingresa un número de teléfono",
                             },
                         ]}
                     >
@@ -137,10 +139,10 @@ function MiCuentaPage(props) {
                     </Form.Item>
 
                     <Form.Item {...tailLayout} className="count-buttons">
-                        <Button  htmlType="submit" className="secondary-button">
+                        <Button  htmlType="submit" className="secondary-button" onClick={handleLogOut()}>
                             Cerrar Sesión
                         </Button>
-                        <Button  htmlType="submit" className="primary-button">
+                        <Button  htmlType="submit" className="primary-button" >
                             Guardar
                         </Button>
 
